@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: GilroyBold;
+    src: url('../fonts/Gilroy-Bold.woff');
+}
+
+@font-face {
+    font-family: GilroyMedium;
+    src: url('../fonts/Gilroy-Medium.woff');
+}
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+    padding-top: 2.5rem;
+}
+
+#introduction {
+    background-image: url('../images/Background-Images.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 324px;
+  
+}
+
+
+#introduction nav .navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+#introduction nav .left-side {
+    position: relative;
+    display: flex;
+}
+
+#introduction nav .left-side .logo {
+    font: 1.575rem GilroyBold;
+    color: white;
+    text-transform: uppercase;
+}
+
+#introduction nav .left-side .menu {
+    position: relative;
+    margin-left: 50px;
+    font: 0.875rem GilroyMedium;
+    color: white;
+    width: 15.75rem;
+    height: 2.691rem;
+    border: 1px solid;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    padding: 10px 10px;
+    user-select: none;
+}
+
+#introduction nav .left-side .menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+#introduction nav .left-side .menu li {
+    cursor: pointer;
+}
+
+#introduction nav .left-side .menu li a {
+    color: white;
+}
+
+
+#introduction nav .left-side .menu img {
+    cursor: pointer;
+}
+
+#introduction nav .left-side .languages {
+    padding-top: 15px;
+    text-align: center;
+    width: 4.188rem;
+    height: 6.5rem;
+    position: absolute;
+    right: -4%;
+    transition: all .4s;
+    top: 2.3rem;
+    color: white;
+    border: 1px solid;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+}
+
+#introduction nav .left-side .languages ul {
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+#introduction nav .left-side .languages ul li:not(:last-child) {
+    margin-bottom: 10px;
+    font-size: 0.875rem;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#introduction nav .right-side {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#introduction nav .right-side .watchlist {
+    width: 8.563rem;
+    height: 2.688rem;
+    border: 1px solid;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    background: linear-gradient(169.5deg rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    font: 0.875rem GilroyMedium;
+    color: white;
+    cursor: pointer;
+
+}
+
+#introduction nav .right-side .watchlist img {
+    margin-top: 3px;
+}
+
+#introduction nav .right-side .sign-in {
+    width: 6.188rem;
+    height: 2.688rem;
+    border: 1px solid;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-transform: capitalize;
+    font: 0.875rem GilroyMedium;
+    color: white;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#introduction .volume-area {
+    margin-top: 4.063rem;
+    float: right;
+    width: 2.603rem;
+    height: 2.603rem;
+    border: 1px solid;
+    border-radius: 100%;
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+}
+
+#introduction .volume-area .img-area {
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 9px;
+}
+
+#introduction .watchlist-area {
+    height: 15.661rem;
+    width: 15.5rem;
+    position: absolute;
+    top: 8%;
+    right: 17%;
+    transition: all .4s;
+
+}
+
+#introduction .watchlist-area ul {
+    height: 13.223rem;
+    width: 15rem;
+    border: 1px solid;
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    background: radial-gradient(100% 100% at 0% 0%, rgb(133 129 129) 0%, rgb(213 208 208 / 63%) 100%);
+    padding: 10px;
+    overflow-y: scroll;
+    list-style: none;
+}
+
+#introduction .watchlist-area ul::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+
+#introduction .watchlist-area ul::-webkit-scrollbar-thumb {
+    background: linear-gradient(183.12deg, rgba(12, 249, 240, 0.5) -35.03%, rgba(214, 134, 255, 0.5) 119.79%);
+}
+
+
+#introduction .watchlist-area ul li {
+    display: flex;
+    align-items: center;
+    background: rgba(31, 31, 31, 1);
+    border-radius: 3px;
+    color: white;
+    height: 2.563rem;
+    width: 12.938rem;
+    margin-top: 10px;
+}
+
+#introduction .watchlist-area ul li .name-area {
+    display: flex;
+    justify-content: space-between;
+    width: 130px;
+    padding-left: 20px;
+}
+
+#introduction .watchlist-area ul li p {
+    font: 0.525rem GilroyBold;
+}
+
+#introduction .watchlist-area ul li img:last-child {
+    cursor: pointer;
+}
+
+#introduction .right-side .watchlist-area .close-button {
+    position: relative;
+    top: 11px;
+    right: -228px;
+    padding: 6px;
+    border-radius: 100%;
+    cursor: pointer;
+    background: radial-gradient(100% 100% at 0% 0%, rgb(133 129 129) 0%, rgb(213 208 208) 100%);
+}
+
+#introduction .right-side .signin-modal .signin-area {
+    width: 30.625rem;
+    height: 33.75rem;
+    z-index: 99;
+    position: fixed;
+    top: 15%;
+    left: 33%;
+    background: radial-gradient(100% 100% at 0% 0%, #61666AEB 0%, #61666AEB 100%);
+    box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+    border-radius: 30px;
+    padding: 25px;
+}
+
+#introduction .right-side .signin-modal .signin-area .close-icon {
+    position: absolute;
+    top: -16px;
+    background: radial-gradient(100% 100% at 0% 0%, #61666AEB 0%, #61666AEB 100%);
+    box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
+    border: 1px solid;
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    right: -12px;
+    border-radius: 100%;
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#introduction .right-side .signin-modal .signin-area .title {
+    font: 1.875rem GilroyBold;
+    color: white;
+    text-align: center;
+}
+
+#introduction .right-side .signin-modal .signin-area .subtitle {
+    text-align: center;
+    margin-top: 32px;
+    color: white;
+    font: 1.125rem GilroyBold;
+}
+
+#introduction .right-side .signin-modal .signin-area form {
+    margin-top: 3.125rem;
+
+}
+
+#introduction .right-side .signin-modal .signin-area form .input-areas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#introduction .right-side .signin-modal .signin-area form .input-area {
+    margin-bottom: 0.938rem;
+}
+
+#introduction .right-side .signin-modal .signin-area form .input-area label {
+    display: block;
+    color: white;
+    font: 0.875rem GilroyBold;
+    margin-bottom: 10px;
+}
+
+#introduction .right-side .signin-modal .signin-area form .input-area input {
+    height: 3.25rem;
+    width: 23.063rem;
+    background-color: #0D0D0D;
+    outline: none;
+    border-radius: 8px;
+    padding: 15px;
+    color: white;
+}
+
+#introduction .right-side .signin-modal .signin-area form .forgot-password {
+    text-align: end;
+    padding-right: 2.25rem;
+
+}
+
+#introduction .right-side .signin-modal .signin-area form .forgot-password>a,
+.form-bottom>a {
+    color: white;
+    font: 0.75rem GilroyMedium;
+}
+
+#introduction .right-side .signin-modal .signin-area .form-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 81%;
+    margin: 1.875rem auto;
+}
+
+#introduction .right-side .signin-modal .signin-area .form-bottom .signin-button button {
+    height: 3rem;
+    width: 10.625rem;
+    border-radius: 3.438rem;
+    text-align: center;
+    font: 1.031rem GilroyMedium;
+    color: white;
+    background: radial-gradient(100% 100% at 0% 0%, #61666AEB 0%, #61666AEB 100%);
+    border: 1px solid;
+    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    cursor: pointer;
+}
+
+#introduction .right-side .signin-modal .signin-area .terms-service {
+    width: 63%;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.6);
+
+    font: 0.75rem GilroyMedium;
+}
+
+#introduction .right-side .signin-modal .signin-area .terms-service a {
+    text-decoration: underline;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+}
+
+
+
+@media screen and (min-width:576px) {
+
+    #introduction .nav-mobile .navbar,
+    .navbar-menu-area {
+        display: none;
+    }
+}
+@media screen and (min-width:577px) and (max-width:767px){
+  
+    .container{
+        max-width: 93%;
+    }
+
+    #introduction nav .left-side .menu {
+        margin-left: 15px;
+        width: 12.75rem;
+    }
+    #introduction nav .right-side .watchlist  {
+        margin-left: 10px;
+        
+    }
+
+    #introduction .right-side .signin-modal .signin-area {
+        width: 26.625rem;
+        top: 2%;
+        left: 25%;
+    }
+    #introduction .watchlist-area {
+        top: 16%;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1180px) {
+    #introduction .right-side .signin-modal .signin-area{
+        top: 2%;
+        left: 19%;
+    }
+    .container{
+        max-width: 88%;
+    }
+
+    #introduction .watchlist-area {
+        right: 152px;
+      
+    }
+  
+
+    
+}
+
+@media screen and (max-width:576px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    #introduction .mobile-container {
+        max-width: 87%;
+        margin: 0 auto;
+        padding-top: 1.938rem;
+    }
+
+    #introduction .nav-mobile .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #introduction .nav-mobile .logo p {
+        font: 1.575rem GilroyBold;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    #introduction .nav-mobile .hamburger-menu {
+        position: relative;
+        z-index: 3;
+    }
+
+    #introduction .nav-mobile .hamburger-menu .line {
+        width: 30px;
+        height: 2px;
+        background: white;
+        margin-bottom: 5px;
+    }
+
+    #introduction .navbar-menu-area {
+        background-color: #000000;
+        width: 16.25rem;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        padding: 40px;
+        z-index: 2;
+        transition: all .4s;
+    }
+
+    .active {
+        transform: translate(-16.25rem);
+        transition: all .4s;
+    }
+
+    .active-line {
+        transition: all .4s;
+        transform: translate(9px, 0px);
+    }
+
+    .de-active-line {
+        transition: all .4s;
+        transform: translate(0px, 0px);
+    }
+
+  
+
+    #introduction .navbar-menu-area ul {
+        margin-top: 2.5rem;
+
+    }
+
+    #introduction .navbar-menu-area ul li {
+        margin-bottom: 0.938rem;
+    }
+
+    #introduction .navbar-menu-area ul li a,
+    span {
+        font: 1.125rem GilroyMedium;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    #introduction .navbar-menu-area ul li:last-child {
+        margin-top: 23.063rem;
+    }
+
+    #introduction .navbar-menu-area ul li:last-child img {
+        margin-left: 9px;
+        margin-bottom: 5px;
+    }
+}
