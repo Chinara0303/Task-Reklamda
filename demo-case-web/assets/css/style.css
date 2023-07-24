@@ -30,9 +30,16 @@ a {
     background-position: center;
     background-repeat: no-repeat;
     height: 324px;
-  
+
 }
 
+.bottom-effect {
+    width: 100%;
+    height: 92px;
+    background: linear-gradient(360deg, #1F1F1F 0.14%, rgba(34, 34, 34, 0.369792) 62.97%, rgba(34, 34, 34, 0) 99.84%);
+    position: absolute;
+    top: 14.5rem;
+}
 
 #introduction nav .navbar {
     display: flex;
@@ -134,7 +141,6 @@ a {
     font: 0.875rem GilroyMedium;
     color: white;
     cursor: pointer;
-
 }
 
 #introduction nav .right-side .watchlist img {
@@ -158,19 +164,39 @@ a {
 }
 
 #introduction .volume-area {
-    margin-top: 4.063rem;
-    float: right;
+    position: relative;
     width: 2.603rem;
     height: 2.603rem;
-    border: 1px solid;
+    float: right;
+    margin-top: 4.063rem;
+}
+
+#introduction .volume-area:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
-    border-image: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4)) 1;
+    background: linear-gradient(169.15deg, rgba(15, 247, 240, 0.4), rgba(214, 134, 255, 0.4));
 }
 
 #introduction .volume-area .img-area {
-    margin: 0 auto;
-    width: 50%;
-    padding-top: 9px;
+    width: 2.303rem;
+    height: 2.303rem;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.16));
+    z-index: 4;
+    border-radius: 100%;
+}
+
+#introduction .volume-area .img-area img {
+    position: absolute;
+    top: 8px;
+    left: 6px;
 }
 
 #introduction .watchlist-area {
@@ -180,7 +206,6 @@ a {
     top: 8%;
     right: 17%;
     transition: all .4s;
-
 }
 
 #introduction .watchlist-area ul {
@@ -244,14 +269,16 @@ a {
 #introduction .right-side .signin-modal .signin-area {
     width: 30.625rem;
     height: 33.75rem;
-    z-index: 99;
+    z-index: 3;
     position: fixed;
     top: 15%;
     left: 33%;
-    background: radial-gradient(100% 100% at 0% 0%, #61666AEB 0%, #61666AEB 100%);
+    background: radial-gradient(100% 100% at 0% 0%, #6c6f72cb 0%, #6c6f72cb 100%);
     box-shadow: -2.418426275253296px -2.418426275253296px 120.92131805419922px 0px rgba(255, 255, 255, 0.02) inset;
     border-radius: 30px;
     padding: 25px;
+    transition: all .4s;
+
 }
 
 #introduction .right-side .signin-modal .signin-area .close-icon {
@@ -286,7 +313,6 @@ a {
 
 #introduction .right-side .signin-modal .signin-area form {
     margin-top: 3.125rem;
-
 }
 
 #introduction .right-side .signin-modal .signin-area form .input-areas {
@@ -320,7 +346,6 @@ a {
 #introduction .right-side .signin-modal .signin-area form .forgot-password {
     text-align: end;
     padding-right: 2.25rem;
-
 }
 
 #introduction .right-side .signin-modal .signin-area form .forgot-password>a,
@@ -354,7 +379,6 @@ a {
     width: 63%;
     margin: 0 auto;
     color: rgba(255, 255, 255, 0.6);
-
     font: 0.75rem GilroyMedium;
 }
 
@@ -370,13 +394,126 @@ a {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 2;
     opacity: 0;
     visibility: hidden;
     transition: all .2s;
 }
 
+#slider-area {
+    background: #1F1F1F;
+}
 
+#slider-area .film {
+    width: 91% !important;
+    height: 13.25rem;
+    background-color: transparent;
+    border-radius: 7px;
+}
+
+
+#slider-area .film .film-hover-area {
+    background: #363636;
+    position: relative;
+    bottom: 47px;
+    padding: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    transition: all .4s;
+}
+
+#slider-area .film .film-hover-area .top-area {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font: .75rem GilroyMedium;
+    margin-bottom: 40px;
+}
+
+#slider-area .film .film-hover-area .top-area p {
+    font-family: GilroyBold;
+    text-transform: capitalize;
+}
+
+#slider-area .film .film-hover-area .bottom-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#slider-area .film .film-hover-area .bottom-area div {
+    cursor: pointer;
+}
+
+#slider-area .film .img-area img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.slick-prev {
+    left: 17px !important;
+    top: 28% !important;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, 0.5);
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+}
+
+.slick-next {
+    right: 37px !important;
+    top: 28%;
+    z-index: 1 !important;
+    background: rgba(0, 0, 0, 0.5);
+    width: 3.75rem;
+    height: 3.75rem;
+    border-radius: 100%;
+}
+
+.slick-prev:before {
+    content: url('../images/Vector\ \(2\).png');
+    opacity: 1 !important;
+}
+
+.slick-next:before {
+    content: url('../images/Vector\ \(3\).png');
+    opacity: 1 !important;
+}
+
+.slick-dotted.slick-slider {
+    margin-top: 39px;
+    margin-bottom: 0 !important;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.slick-dots {
+    display: none !important;
+}
+
+.scale-effect {
+    transform: scale(1.1);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#slider-area .film .name-area {
+    margin: 15px 6px;
+}
+
+#slider-area .film .name-area p {
+    font: 0.875rem GilroyBold;
+    color: white;
+    text-transform: capitalize;
+}
 
 @media screen and (min-width:576px) {
 
@@ -385,9 +522,10 @@ a {
         display: none;
     }
 }
-@media screen and (min-width:577px) and (max-width:767px){
-  
-    .container{
+
+@media screen and (min-width:577px) and (max-width:767px) {
+
+    .container {
         max-width: 93%;
     }
 
@@ -395,9 +533,9 @@ a {
         margin-left: 15px;
         width: 12.75rem;
     }
-    #introduction nav .right-side .watchlist  {
+
+    #introduction nav .right-side .watchlist {
         margin-left: 10px;
-        
     }
 
     #introduction .right-side .signin-modal .signin-area {
@@ -405,28 +543,37 @@ a {
         top: 2%;
         left: 25%;
     }
+
     #introduction .watchlist-area {
         top: 16%;
     }
+
+    .slick-next,
+    .slick-prev {
+        top: 19% !important;
+    }
 }
 
-
 @media screen and (min-width:768px) and (max-width:1180px) {
-    #introduction .right-side .signin-modal .signin-area{
+    #introduction .right-side .signin-modal .signin-area {
         top: 2%;
         left: 19%;
     }
-    .container{
+
+    .container {
         max-width: 88%;
     }
 
     #introduction .watchlist-area {
         right: 152px;
-      
     }
-  
 
-    
+    .slick-next,
+    .slick-prev {
+        top: 24% !important;
+    }
+
+
 }
 
 @media screen and (max-width:576px) {
@@ -490,8 +637,6 @@ a {
         transform: translate(0px, 0px);
     }
 
-  
-
     #introduction .navbar-menu-area ul {
         margin-top: 2.5rem;
 
@@ -514,5 +659,10 @@ a {
     #introduction .navbar-menu-area ul li:last-child img {
         margin-left: 9px;
         margin-bottom: 5px;
+    }
+
+    .slick-next,
+    .slick-prev {
+        display: none !important;
     }
 }

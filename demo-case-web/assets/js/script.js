@@ -29,9 +29,11 @@ watchlist.addEventListener("click", function () {
 let signinButton = document.querySelector('.sign-in');
 let signinArea = document.querySelector('.signin-modal');
 let overlay = document.querySelector('.overlay');
+let body = document.querySelector('body')
 
 signinButton.addEventListener("click", function () {
     signinArea.classList.toggle('hidden');
+    body.style.overflow = 'hidden'
     overlay.style.opacity = '1'
     overlay.style.visibility = 'visible'
 })
@@ -49,6 +51,7 @@ watchlistCloseButton.addEventListener("click", function () {
 
 signinCloseButton.addEventListener("click", function () {
     signinArea.classList.add('hidden');
+    body.style.overflow = 'unset'
     overlay.style.opacity = "0"
     overlay.style.visibility = 'hidden'
 })
@@ -62,13 +65,13 @@ let line = document.querySelector('.hamburger-menu .de-active-line');
 
 burgerMenu.addEventListener("click", function () {
     menuArea.classList.toggle('active');
-    if(line.classList.contains('de-active-line')){
+    if (line.classList.contains('de-active-line')) {
         line.classList.remove('de-active-line');
         line.classList.add('active-line');
         overlay.style.opacity = "1"
         overlay.style.visibility = 'visible'
     }
-   else if(line.classList.contains('active-line')){
+    else if (line.classList.contains('active-line')) {
         line.classList.remove('active-line');
         line.classList.add('de-active-line');
         overlay.style.opacity = "0"
@@ -79,13 +82,13 @@ burgerMenu.addEventListener("click", function () {
 //overlay
 overlay.addEventListener("click", function () {
     signinArea.classList.toggle('hidden');
-   
-    if(!menuArea.classList.contains('active')){
+    body.style.overflow = 'unset'
+    if (!menuArea.classList.contains('active')) {
         menuArea.classList.add('active');
     }
     overlay.style.opacity = "0"
     overlay.style.visibility = 'hidden'
-    if(line.classList.contains('active-line')){
+    if (line.classList.contains('active-line')) {
         line.classList.remove('active-line');
         line.classList.add('de-active-line');
     }
@@ -106,3 +109,20 @@ document.addEventListener("click", function (e) {
     }
 })
 
+
+//film mouse over
+let hoverElems = document.querySelectorAll('.film');
+let hoverAreas = document.querySelectorAll('.film-hover-area');
+let nameAreas = document.querySelector('.film .name-area')
+
+hoverElems.forEach((hoverElem, index) => {
+    hoverElem.addEventListener('mouseover', function () {
+        hoverAreas[index].classList.toggle('hidden')
+        hoverElem.classList.toggle('scale-effect')
+    })
+
+    hoverElem.addEventListener('mouseout', function () {
+        hoverAreas[index].classList.add('hidden');
+        hoverElem.classList.remove('scale-effect')
+    });
+});
