@@ -126,3 +126,4 @@ hoverElems.forEach((hoverElem, index) => {
         hoverElem.classList.remove('scale-effect')
     });
 });
+
